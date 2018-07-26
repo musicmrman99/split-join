@@ -32,3 +32,15 @@ $ ./split-join '/' :3 "/this/is/my/only/path/forlong/yay.ext"
 $ ./split-join '/' : "/this/is/my/only/path/forlong/yay.ext"
 /this/is/my/only/path/forlong/yay.ext
 ```
+
+And of course, you can use outputs as inputs:
+```sh
+$ path="/this/is/my/only/path/forlong/yay.ext"
+$ filename="$(./split-join '/' -1: "$path")"
+$ name="$(./split-join '.' :-1 "$filename")"
+$ extension="$(./split-join '.' -1: "$filename")"
+$ 
+$ printf '%s\n' "$name" "$extension"
+yay
+ext
+```
