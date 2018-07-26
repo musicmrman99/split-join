@@ -1,8 +1,19 @@
 # Split-Join
 A fast implementation of the basic functionality of python's slice operator.
 
+## History
 Originally created 2016-01-16, possibly with further development in July-August 2016.
 
+## Building
+Building should be as simple as (from the project root directory):
+```
+$ mkdir build
+$ g++ -std=c++11 -Wall -Wextra -Werror -pedantic -pedantic-errors src/main.cpp -o build/split-join
+```
+
+This has never been specifically tested on Windows or Mac, but I see no reason it shouldn't work. If it doesn't - open an issue!
+
+## Examples
 Basic usage:
 ```sh
 $ split-join '/' 1:4 "this/is/my/only/string/forlong/yay"
