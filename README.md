@@ -26,7 +26,7 @@ $ split-join '/' 0:0 "this/is/my/only/string/forlong/yay"
 
 ```
 
-Negative indeces are allowed - they go from the end:
+Negative indices are allowed - they go from the end:
 ```sh
 $ split-join '/' 0:-1 "this/is/my/only/string/forlong/yay"
 this/is/my/only/string/forlong
